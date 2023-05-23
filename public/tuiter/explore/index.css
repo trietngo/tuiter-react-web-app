@@ -1,0 +1,110 @@
+.wd-header {
+    display: table;
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+}
+
+.wd-header--container--form {
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.wd-header--searchbar {
+    float: left;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    width: calc(100% - 4rem);
+}
+
+.wd-header--button--search {
+    position: absolute;
+    margin: 0.25rem;
+    margin-top: 0.5rem;
+    color: darkgray;
+}
+
+.wd-header--settings {
+    display: table-cell;
+    float: right;
+    margin: 0.3rem 1rem 0.3rem 0;
+}
+
+/* TABS */
+
+.wd-tabs--list {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-tabs--list--item {
+    border-style: solid;
+    border-width: 0 0 0.25rem 0;
+    border-color: transparent;
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 0.25rem;
+    color: darkgray;
+    font-weight: 700;
+}
+
+.wd-tabs--list--item:focus {
+    border-style: solid;
+    border-width: 0 0 0.25rem 0;
+    border-color: blue;
+    color: black;
+}
+
+/* HIGHLIGHT */
+
+.wd-highlight {
+    position: relative;
+    height: fit-content;
+}
+
+.wd-highlight--img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.wd-highlight--caption {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* TRENDING */
+.wd-trending {
+    position: relative;
+}
+
+.wd-trending--list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 0;
+}
+
+.wd-trending--list--item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.wd-trending--list--item:hover {
+    background-color: whitesmoke;
+}
+
+.wd-trending--subject {
+    color: darkgray;
+}
+
+.wd-trending--title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}

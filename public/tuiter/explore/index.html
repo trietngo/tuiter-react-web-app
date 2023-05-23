@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../vendors/fontawesome/css/brands.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+          <div class="d-grid gap-2 col-lg-1 col-xl-2 col-md-2 col-sm-2">
+            <ul class="list-group text-left">
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../home.html"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../home.html"><i class="fas fa-home"></i><span class="d-none d-lg-none d-xl-inline"> Home</span></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="explore-css.html"><i class="fas fa-hashtag"></i> <span class="d-none d-lg-none d-xl-inline"> Explore (CSS)</span></a></li>
+                <li class="list-group-item active"><a class="text-decoration-none text-white" href="index.html"><i class="fas fa-hashtag"></i>  <span class="d-none d-lg-none d-xl-inline"> Explore</span></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../notifications.html"><i class="fas fa-bell"></i> <span class="d-none d-lg-none d-xl-inline"> Notifications</span> </a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../messages.html"><i class="fas fa-envelope"></i> <span class="d-none d-lg-none d-xl-inline"> Messages</span></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../bookmarks/bookmarks-css.html"><i class="fas fa-bookmark"></i> <span class="d-none d-lg-none d-xl-inline"> Bookmarks</span></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../lists.html"><i class="fas fa-list"></i> <span class="d-none d-lg-none d-xl-inline"> Lists</span></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href="../profile.html"><i class="fas fa-user"></i> <span class="d-none d-lg-none d-xl-inline"> Profile</span></a></li>
+                <li class="list-group-item"><a class="text-decoration-none text-dark" href=""><i class="fas fa-info-circle"></i> <span class="d-none d-lg-none d-xl-inline"> More</span></a></li>
+                <button type="button" class="btn btn-primary btn-lg fw-bold rounded-pill mt-4">Tuit</button>
+            </ul>
+
+          </div>
+
+          <div class="col-lg-7 col-xl-6 col-md col-sm">
+            <div class="row">
+                <div class="input-group wd-header--container justify-content-between">
+                    <form class="wd-header--container--form p-0 w-75 flex-grow-1 bg-white" action="">
+        
+                        <button type="submit" class="wd-header--button wd-header--button--search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        
+                        <input class="border wd-header--searchbar rounded-pill bg-white pl-3 w-100" type="text" placeholder="Search Tuiter">
+                    </form>
+
+                    <div class="flex-shrink-1 wd-header--settings m-2">
+                        <button type="submit" class="wd-header--button wd-header--button--setting">
+                            <i class="fas fa-cog text-primary"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="nav nav-tabs mt-2">
+                <li class="nav-item">
+                  <a class="nav-link active" href="for-you.html">For you</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trending.html">Trending</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sports.html">Sports</a>
+                </li>
+
+                <li class="nav-item d-md-inline d-sm-none">
+                    <a class="nav-link" href="entertainment.html">Entertainment</a>
+                  </li>
+            </ul>
+
+            <div class="container p-0 mt-2">
+                <div class="wd-highlight" id="highlight">
+
+                    <a href="">
+                        <img class="wd-highlight--img" src="img-venus.jpeg" alt="Venus Cloud City">
+            
+                        <div class="wd-highlight--caption">
+                            Cloud City Founded on Venus
+                        </div>
+                    </a>
+            
+                </div>
+    
+                <ul class="list-group text-left mb-4">
+    
+                    <li class="list-group-item">
+                        <a class="text-decoration-none text-dark" href="">
+                            <div class="container">
+                                <div class="row align-items-center">
+    
+                                    <div class="m-0 flex-grow-1 col-7">
+                                        <p class="m-0 text-muted">Software Development</p>
+                                        <p class="m-0 fw-bold">Java <i class="fas fa-check-circle"></i><span class="text-muted fw-normal"> - 2h ago</span></p>
+                                        <p class="m-0">Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+                                        <p class="m-0 text-muted">10.3K tuits</p>
+                                    </div>
+    
+                                    <div class="d-flex align-items-center p-2 ms-auto flex-shrink-1 col-2">
+                                        <img class="img-fluid rounded mh-100 mw-100" src="../../images/img_java.png" alt="">
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a class="text-decoration-none text-dark" href="">
+                            <div class="container">
+                                <div class="row align-items-center">
+    
+                                    <div class="m-0 flex-grow-1 col-7">
+                                        <p class="m-0 text-muted">Programming Language</p>
+                                        <p class="m-0 fw-bold">JavaScript <i class="fas fa-check-circle"></i><span class="text-muted fw-normal"> - 2h ago</span></p>
+                                        <p class="m-0">JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.</p>
+                                        <p class="m-0 text-muted">10.3K tuits</p>
+                                    </div>
+    
+                                    <div class="d-flex align-items-center p-2 ms-auto flex-shrink-1 col-2">
+                                        <img class="img-fluid rounded mh-100 mw-100" src="../../images/img_js.png" alt="">
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a class="text-decoration-none text-dark" href="">
+                            <div class="container">
+                                <div class="row align-items-center">
+    
+                                    <div class="m-0 flex-grow-1 col-7">
+                                        <p class="m-0 text-muted">Food and Culture</p>
+                                        <p class="m-0 fw-bold">In-N-Out Cheeseburgers <span class="text-muted fw-normal"> - 5h ago</span></p>
+                                        <p class="m-0 text-muted">45.2K tuits</p>
+                                    </div>
+    
+                                    <div class="d-flex align-items-center p-2 ms-auto flex-shrink-1 col-2">
+                                        <img class="img-fluid rounded mh-100 mw-100" src="../../images/img_burgers.jpeg" alt="">
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a class="text-decoration-none text-dark" href="">
+                            <div class="container">
+                                <div class="row align-items-center">
+    
+                                    <div class="m-0 flex-grow-1 col-7">
+                                        <p class="m-0 text-muted">Music</p>
+                                        <p class="m-0 fw-bold">Synth-Pop <span class="text-muted fw-normal"> - 23h ago</span></p>
+                                        <p class="m-0 text-muted">21.1K tuits</p>
+                                    </div>
+    
+                                    <div class="d-flex align-items-center p-2 ms-auto flex-shrink-1 col-2">
+                                        <img class="img-fluid rounded mh-100 mw-100" src="../../images/img_synthpop.png" alt="">
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+    
+                </ul>
+            </div>
+
+        
+          </div>
+
+          <div class="col-lg d-md-none d-none d-lg-block">
+            <ul class="list-group text-left">
+                <li class="list-group-item text-decoration-none text-dark fw-bold">Who to follow</li>
+
+                <li class="list-group-item">
+                    <a class="text-decoration-none text-dark" href="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-flex align-items-center p-0 col-2">
+                                    <img class="img-fluid rounded-circle mh-100 mw-100" src="../../images/img_java.png" alt="">
+                                </div>
+
+                                <div class="d-grid m-0 col-7">
+                                    <p class="mb-0">Java <i class="fas fa-check-circle"></i></p>
+                                    <p class="mb-0">@Java</p>
+                                </div>
+
+                                <div class="d-grid col-3 align-items-center mx-auto">
+                                    <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item">
+                    <a class="text-decoration-none text-dark" href="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-flex align-items-center p-0 col-2">
+                                    <img class="img-fluid rounded-circle mh-100 mw-100" src="../../images/img_relativity.jpeg" alt="">
+                                </div>
+
+                                <div class="d-grid m-0 col-7">
+                                    <p class="mb-0">Relativity Space <i class="fas fa-check-circle"></i></p>
+                                    <p class="mb-0">@relativityspace</p>
+                                </div>
+
+                                <div class="d-grid col-3 align-items-center mx-auto">
+                                    <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item">
+                    <a class="text-decoration-none text-dark" href="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-flex align-items-center p-0 col-2">
+                                    <img class="img-fluid rounded-circle mh-100 mw-100" src="../../images/img_galactic.svg" alt="">
+                                </div>
+
+                                <div class="d-grid m-0 col-7">
+                                    <p class="mb-0">Virgin Galactic <i class="fas fa-check-circle"></i></p>
+                                    <p class="mb-0">@virgingalactic</p>
+                                </div>
+
+                                <div class="d-grid col-3 align-items-center mx-auto">
+                                    <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item">
+                    <a class="text-decoration-none text-dark" href="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-flex align-items-center p-0 col-2">
+                                    <img class="img-fluid rounded-circle mh-100 mw-100" src="../../images/img_nasa.png" alt="">
+                                </div>
+
+                                <div class="d-grid m-0 col-7">
+                                    <p class="mb-0">NASA <i class="fas fa-check-circle"></i></p>
+                                    <p class="mb-0">@NASA</p>
+                                </div>
+
+                                <div class="d-grid col-3 align-items-center mx-auto">
+                                    <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-group-item">
+                    <a class="text-decoration-none text-dark" href="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-flex align-items-center p-0 col-2">
+                                    <img class="img-fluid rounded-circle mh-100 mw-100" src="../../images/img_tesla.webp" alt="">
+                                </div>
+
+                                <div class="d-grid m-0 col-7">
+                                    <p class="mb-0">Tesla <i class="fas fa-check-circle"></i></p>
+                                    <p class="mb-0">@Tesla</p>
+                                </div>
+
+                                <div class="d-grid col-3 align-items-center mx-auto">
+                                    <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

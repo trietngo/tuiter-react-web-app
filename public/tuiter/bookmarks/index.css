@@ -1,0 +1,123 @@
+/* HEADER */
+
+.wd-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-header--back {
+    display: flex;
+    align-items: center;
+}
+
+.wd-header--back-button {
+    padding: 1rem 3rem 1rem 1rem;
+    flex-grow: 2;
+}
+
+.wd-header--title {
+    margin: 0;
+    padding: 1rem;
+    flex-grow: 3;
+}
+
+.wd-header--more {
+    padding: 1rem;
+}
+
+/* BOOKMARK LIST */
+.wd-bookmarks--list {
+    padding: 0;
+    margin: 0;
+}
+
+.wd-bookmarks--list--item {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+}
+
+.wd-bookmarks--list--item:hover {
+    background-color: whitesmoke;
+}
+
+.wd-bookmarks--list--item--content {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.wd-bookmarks--list--item--avatar {
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 1rem;
+    margin-right: 0;
+}
+
+.wd-bookmarks--list--item--text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.wd-bookmarks--list--item--text--body--author {
+    font-weight: 700;
+}
+
+.wd-bookmarks--list--item--text--body--author--check {
+    color: blue;
+}
+
+.wd-bookmarks--list--item--text--more {
+    margin-left: 2rem;
+}
+
+.wd-bookmarks--list--item--text--body--timestamp {
+    font-weight: 400;
+    color: darkgray;
+}
+
+.wd-bookmarks--list--item--link {
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wd-bookmarks--list--item--link--img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    max-height: 20rem;
+}
+
+.wd-bookmarks--list--item--link--desc {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.wd-bookmarks--list--item--link--desc--url {
+    color: darkgray;
+}
+
+.wd-bookmarks--list--item--link--desc--preview {
+    color: darkgray;
+}
+
+.wd-bookmarks--list--item--link--desc:hover{
+    background-color: whitesmoke;
+}
+
+.wd-bookmarks--list--item--buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-bookmarks--list--item--buttons--numbers {
+    font-family: sans-serif;
+    font-weight: 400;
+    padding: 0 0.5rem 0 0.5rem;
+}
+ 
