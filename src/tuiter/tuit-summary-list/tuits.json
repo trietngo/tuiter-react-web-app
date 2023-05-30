@@ -1,0 +1,14 @@
+[
+    { "_id": 123, "topic": "Music", "userName": "SynthCentral",
+    "title": "SynthPop rated \"Most Appropriate for Space Travel\"",
+    "time": "1h",   "image": "img_synthpop.png" },
+
+    { "_id": 234, "topic": "Food and Culture",   "userName": "In-N-Out",
+    "title": "In-N-Out introduces bio-engineered, microplastic-free patties not seen since 2023.",
+    "time": "5h",   "image": "img_burgers.jpeg" },
+
+    { "_id": 345, "topic": "Programming",  "userName": "CompSciWorld",
+    "title": "JavaScript is still considered relevant in 3021, for some reason.",
+    "time": "2d",   "image": "img_js.png"
+    }
+]
