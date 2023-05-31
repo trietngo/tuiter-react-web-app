@@ -21,14 +21,14 @@ function ExploreScreen() {
             </div>
 
             <ul className="nav nav-pills mb-2 mt-2">
-                <li className="nav-item">
-                    <a className="nav-link active">For You</a>
+                <li className="nav-item m-1">
+                    <a className="btn btn-primary  nav-link active">For You</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link">Trending</a>
+                <li className="nav-item m-1">
+                    <a className="btn btn-primary nav-link">Trending</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link">News</a>
+                <li className="nav-item m-1">
+                    <a className="btn btn-primary nav-link">News</a>
                 </li>
             </ul>
 
