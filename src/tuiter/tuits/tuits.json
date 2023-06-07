@@ -1,0 +1,46 @@
+[
+    { 
+        "_id": 123,
+        "topic": "Music",
+        "userName": "SynthPop Enjoyer",
+        "title": "SynthPop rated \"Most Appropriate for Space Travel\"",
+        "time": "1h",
+        "image": "img_synthpop.png",
+        "liked": false,
+        "replies": 1443,
+        "retuits": 652,
+        "likes": 10349,
+        "handle": "@synthfan",
+        "tuit": "\"A Real Hero\" by Electric Youth is an all-time classic. Give the song another listen today!"
+    },
+
+    { 
+        "_id": 234,
+        "topic": "Food and Culture",
+        "userName": "In-N-Out",
+        "title": "In-N-Out introduces bio-engineered, microplastic-free patties not seen since 2023.",
+        "time": "5h",
+        "image": "img_burgers.jpeg",
+        "liked": false,
+        "replies": 54,
+        "retuits": 81,
+        "likes": 578,
+        "handle": "@InNOut",
+        "tuit": "Happy Cheeseburger Day!"
+    },
+
+    {
+        "_id": 345,
+        "topic": "Programming",
+        "userName": "NASA",
+        "title": "JavaScript is still considered relevant in 3021, for some reason.",
+        "time": "2d",
+        "image": "img_nasa.png",
+        "liked": false,
+        "replies": 3543,
+        "retuits": 4322,
+        "likes": 28349,
+        "handle": "@NASA",
+        "tuit": "\"A Real Hero\" by Electric Youth is quite suitable for space travel. Let us know how you feel!"
+    }
+]
