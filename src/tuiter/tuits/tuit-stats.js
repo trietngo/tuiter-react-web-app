@@ -1,15 +1,11 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { likeUnlikeTuit } from "./tuits-reducer";
+import { updateTuitThunk } from "../services/tuits-thunks";
 
 const TuitStats = ( {tuit} ) => {
 
     const dispatch = useDispatch();
-
-    const likeTuitHandler = (id) => {
-        dispatch(likeUnlikeTuit(id));
-    }
 
     // Shorten long numbers: 1465 = 1.4K
     const shortenNum = (num) => {
@@ -30,8 +26,14 @@ const TuitStats = ( {tuit} ) => {
 
             <div className="col">
                 <i className={`bi ${tuit.liked === true ? "bi-heart-fill text-danger" : "bi-heart"}`}
-                    onClick={() => likeTuitHandler(tuit._id)}></i> &nbsp;
+                    onClick={() => dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1}))}></i> &nbsp;
                 {shortenNum(tuit.likes)}
+            </div>
+
+            <div className="col">
+                <i className={`bi ${tuit.liked === true ? "bi-hand-thumbs-down-fill text-primary" : "bi-hand-thumbs-down"}`}
+                    onClick={() => dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes + 1}))}></i> &nbsp;
+                {shortenNum(tuit.dislikes)}
             </div>
 
             <div className="col-2">

@@ -1,19 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import TuitStats from "./tuit-stats";
-import { deleteTuit } from "./tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
 
-const TuitItem = (
-    {
-        tuit = ""
-    }
-
-) => {
+const TuitItem = (tuits) => {
 
     const dispatch = useDispatch();
 
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
 
     return(
@@ -21,18 +16,18 @@ const TuitItem = (
             <div className="row justify-content-between">
 
                 <div className="col-2">
-                    <img width={50} className="float-end rounded-circle" src={`..//images/${tuit.image}`}/>
+                    <img width={50} className="float-end rounded-circle" src={`..//images/${tuits.tuit.image}`}/>
                 </div>
 
                 <div className="col-10">
                     <div>
                         <i className="bi bi-x-lg float-end"
-                                    onClick={() => deleteTuitHandler(tuit._id)}></i>
+                                    onClick={() => deleteTuitHandler(tuits.tuit._id)}></i>
                     
-                        <span className="fw-bold">{tuit.userName}</span> <i class="bi bi-patch-check-fill text-primary"></i> {tuit.handle} &#x2022; {tuit.time}</div>
-                    <div>{tuit.tuit}</div>
+                        <span className="fw-bold">{tuits.tuit.username}</span> <i class="bi bi-patch-check-fill text-primary"></i> {tuits.tuit.handle} &#x2022; {tuits.tuit.time}</div>
+                    <div>{tuits.tuit.tuit}</div>
                     <div>
-                        <TuitStats tuit={tuit}/>
+                        <TuitStats tuit={tuits.tuit}/>
                     </div>
                 </div>
             </div>

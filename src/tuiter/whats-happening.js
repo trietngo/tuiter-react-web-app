@@ -5,7 +5,7 @@ import { MdFormatListBulleted } from "react-icons/md";
 import { BsEmojiSmile } from 'react-icons/bs';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 
-import { createTuit } from "./tuits/tuits-reducer";
+import { createTuitThunk } from "./services/tuits-thunks";
 import { useDispatch } from "react-redux";
 
 
@@ -19,7 +19,7 @@ const WhatsHappening = () => {
             tuit: whatsHappening
         }
 
-        dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));
         setWhatsHappening("");
     }
 
