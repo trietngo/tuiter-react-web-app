@@ -10,15 +10,15 @@ import {Routes, Route, Navigate} from "react-router";
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
-        <Routes>
-          <Route path="/"       element={<Navigate to="/labs/a3"/>}/>
-          <Route path="/labs/*"   element={<Labs/>}/>
-          <Route path="/hello"   element={<HelloWorld/>}/>
-          <Route path="/tuiter/*" element={<Tuiter/>}/>
+        <div className="container">
+          <Routes>
+            <Route path="/"       element={<Navigate to="/labs/a3"/>}/>
+            <Route path="/labs/*"   element={<Labs/>}/>
+            <Route path="/hello"   element={<HelloWorld/>}/>
+            <Route path="/tuiter/*" element={<Tuiter/>}/>
 
-        </Routes>
-      </div>
+          </Routes>
+        </div>
     </BrowserRouter>
     
 
