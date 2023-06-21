@@ -6,18 +6,22 @@ const NavigationSidebar = () => {
     const { pathname } = useLocation();
     const [ignore, tuiter, active] = pathname.split("/");
 
-    const links = [
+    let links = [
         ["home", "bi bi-house"],
         ["explore-screen", "bi bi-binoculars"],
         ["notifications", "bi bi-bell"],
         ["messages", "bi bi-envelope"],
         ["bookmarks", "bi bi-book"],
         ["lists", "bi bi-list-ul"],
-        //["profile", "bi bi-person"],
+        ["profile", "bi bi-person"],
         ["more", "bi bi-three-dots"]
     ];
 
     const { currentUser } = useSelector((state) => state.user);
+
+    if (!currentUser) {
+        links = [...links, ["login", "bi bi-box-arrow-in-right"], ["register", "bi bi-r-square"]]
+    }
 
     return (
         <div className="list-group">
@@ -31,15 +35,6 @@ const NavigationSidebar = () => {
                 </Link>
             )}
 
-            {!currentUser && <Link className="list-group-item" to="/tuiter/login"><i className="bi bi-box-arrow-in-right"></i><span className="d-none d-lg-none d-xl-inline">
-                    &nbsp; Login
-                    </span></Link>}
-            
-            {!currentUser && <Link className="list-group-item" to="/tuiter/register"><i className="bi bi-r-square"></i><span className="d-none d-lg-none d-xl-inline">
-                    &nbsp; Register
-                    </span></Link>}
-
-            {currentUser && <Link className="list-group-item" to="/tuiter/profile">Profile</Link>}
         </div>
     );
 

@@ -10,10 +10,10 @@ function ProfileScreen() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const save = async () => { await dispatch(updateUserThunk(profile)); };
+    const save = () => { dispatch(updateUserThunk(profile)); };
 
     useEffect(() => {
-        const loadProfile = async () => {
+        const loadProfile = () => {
             const { payload } = dispatch(profileThunk());
             setProfile(payload);
         };
@@ -51,6 +51,7 @@ function ProfileScreen() {
                     
                 </div>
             )}
+
             <button
                 onClick={() => {
                 dispatch(logoutThunk());

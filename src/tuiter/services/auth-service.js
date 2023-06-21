@@ -4,7 +4,8 @@ import axios from "axios";
 const SERVER_API_URL = process.env.REACT_APP_SERVER_API_URL;
 
 // URL to auth controller
-const USERS_URL = `${SERVER_API_URL}/api/users`;
+const USERS_URL = `${SERVER_API_URL}/users`;
+console.log("USERS_URL:", USERS_URL);
 
 // configure axios to support cookies
 // for passing credentials
@@ -25,8 +26,10 @@ export const logout = async () => {
 
 // Profile
 export const profile = async () => {
-    const response = await api.post(`${USERS_URL}/profile`);
-    return response;
+    const response = await api.get(`${USERS_URL}/profile`);
+
+    console.log(response.data)
+    return response.data;
 };
 
 // Update User
