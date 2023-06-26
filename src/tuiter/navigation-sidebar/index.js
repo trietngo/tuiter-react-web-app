@@ -13,14 +13,17 @@ const NavigationSidebar = () => {
         ["messages", "bi bi-envelope"],
         ["bookmarks", "bi bi-book"],
         ["lists", "bi bi-list-ul"],
-        ["profile", "bi bi-person"],
-        ["more", "bi bi-three-dots"]
+        ["more", "bi bi-three-dots"],
     ];
 
     const { currentUser } = useSelector((state) => state.user);
 
-    if (!currentUser) {
+    if (currentUser === null) {
         links = [...links, ["login", "bi bi-box-arrow-in-right"], ["register", "bi bi-r-square"]]
+    }
+
+    else if (currentUser != null) {
+        links = [...links, ["profile", "bi bi-person"]]
     }
 
     return (

@@ -5,6 +5,9 @@ import { profileThunk, logoutThunk, updateUserThunk } from "../services/auth-thu
 
 function ProfileScreen() {
     const { currentUser } = useSelector((state) => state.user);
+    
+    console.log("CurrentUser is:", currentUser);
+
     const [ profile, setProfile ] = useState(currentUser);
 
     const dispatch = useDispatch();
@@ -14,13 +17,22 @@ function ProfileScreen() {
 
     useEffect(() => {
         const loadProfile = () => {
-            const { payload } = dispatch(profileThunk());
-            setProfile(payload);
+            try {
+                const { payload } = dispatch(profileThunk());
+                setProfile(payload);
+            }
+            catch (error) {
+                console.error(error);
+                navigate("/login");
+            }
+            
         };
 
         loadProfile();
         
-    }, [dispatch]);
+    }, []);
+    
+    console.log("Profile is: ", profile)
     
     return (
         <div>
@@ -29,7 +41,7 @@ function ProfileScreen() {
                 <div>
                     <div>
                         <label>First Name</label>
-                        <input type="text" value={profile.firstName}
+                        <input type="text" value={profile.firstName} 
                         onChange={(event) => {
                             const newProfile = {
                             ...profile, firstName: event.target.value,
@@ -40,7 +52,7 @@ function ProfileScreen() {
 
                     <div>
                         <label>Last Name</label>
-                        <input type="text" value={profile.lastName}
+                        <input type="text" value={profile.firstName} 
                         onChange={(event) => {
                             const newProfile = {
                             ...profile, lastName: event.target.value,
@@ -53,11 +65,12 @@ function ProfileScreen() {
             )}
 
             <button
+                className="btn btn-primary"
                 onClick={() => {
                 dispatch(logoutThunk());
                 navigate("/tuiter/login");
                 }}>                   Logout</button>
-            <button onClick={save}>Save  </button>
+            <button className="btn btn-primary" onClick={save}>Save  </button>
         </div>
     );
 }

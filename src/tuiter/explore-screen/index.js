@@ -37,7 +37,12 @@ function ExploreScreen() {
                 <h1 className="position-absolute wd-nudge-up text-white">
                     Cloud City Founded on Venus</h1>
             </div>
-            <TuitSummaryList/>
+            {
+                /*
+                    <TuitSummaryList/>
+                */
+            }
+            
         </>
         
     )
