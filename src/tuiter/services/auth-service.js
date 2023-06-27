@@ -14,8 +14,7 @@ const api = axios.create({ withCredentials: true })
 // Login Service function
 export const login = async ({ username, password}) => {
     const response = await api.post(`${USERS_URL}/login`, { username, password });
-    const user = response.data;
-    return user;
+    return response.data;
 };
 
 // Logout
@@ -41,6 +40,5 @@ export const updateUser = async (user) => {
 // Register user
 export const register = async ({ username, password }) => {
     const response = await api.post(`${USERS_URL}/register`, { username, password });
-    const user = response.data;
-    return user;
+    return response.data;
 }

@@ -21,13 +21,14 @@ function LoginScreen() {
     // handles login button click
     const handleLogin = async () => {
         // send credentials to login controller
+        console.log("Inside HandleLogin")
         try {
             // if successful, navigate to profile
             await dispatch(loginThunk({ username, password }));
             navigate("/tuiter/profile");
         } catch (e) {
             // if not show error
-            alert(e);
+            console.error(e);
         }
     };
 

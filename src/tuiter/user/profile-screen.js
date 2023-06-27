@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { profileThunk, logoutThunk, updateUserThunk } from "../services/auth-thunks";
 
 function ProfileScreen() {
+    console.log("PROFILE SCREEN RENDERED")
     const { currentUser } = useSelector((state) => state.user);
     
     console.log("CurrentUser is:", currentUser);
@@ -13,10 +14,17 @@ function ProfileScreen() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const save = () => { dispatch(updateUserThunk(profile)); };
+    const save = async () => { 
+        try {
+            await dispatch(updateUserThunk(profile));
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     useEffect(() => {
         const loadProfile = () => {
+            console.log("Inside loadProfile");
             try {
                 const { payload } = dispatch(profileThunk());
                 setProfile(payload);
@@ -28,10 +36,10 @@ function ProfileScreen() {
             
         };
 
-        loadProfile();
+        //loadProfile();
         
     }, []);
-    
+
     console.log("Profile is: ", profile)
     
     return (
@@ -39,25 +47,23 @@ function ProfileScreen() {
             <h1>Profile</h1>
             {profile && (
                 <div>
-                    <div>
-                        <label>First Name</label>
+                    <div className="mb-2">
+                        <label>First Name:</label>
                         <input type="text" value={profile.firstName} 
                         onChange={(event) => {
-                            const newProfile = {
+                            setProfile({
                             ...profile, firstName: event.target.value,
-                            };
-                            setProfile(newProfile);
+                            });
                         }}/>
                     </div>
 
-                    <div>
-                        <label>Last Name</label>
-                        <input type="text" value={profile.firstName} 
+                    <div className="mb-2">
+                        <label>Last Name:</label>
+                        <input type="text" value={profile.lastName} 
                         onChange={(event) => {
-                            const newProfile = {
+                            setProfile({
                             ...profile, lastName: event.target.value,
-                            };
-                            setProfile(newProfile);
+                            });
                         }}/>
                     </div>
                     
@@ -65,12 +71,12 @@ function ProfileScreen() {
             )}
 
             <button
-                className="btn btn-primary"
+                className="btn btn-primary m-2"
                 onClick={() => {
                 dispatch(logoutThunk());
                 navigate("/tuiter/login");
                 }}>                   Logout</button>
-            <button className="btn btn-primary" onClick={save}>Save  </button>
+            <button className="btn btn-primary m-2" onClick={save}>Save  </button>
         </div>
     );
 }
